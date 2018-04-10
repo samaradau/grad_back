@@ -1,0 +1,4 @@
+[submodule "LabTesterAngular"]
+	path = LabTesterAngular
+	url = git@git.epam.com:epm-farm/net-lab/LabTesterAngular.git
+	branch = develop
