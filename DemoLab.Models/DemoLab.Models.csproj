@@ -57,7 +57,39 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="**\*.cs" Exclude="obj\Debug\*.cs;obj\Release\*.cs" />
+    <Compile Include="CandidateManagement\Candidate.cs" />
+    <Compile Include="ExerciseExecutor\CandidateExerciseResult.cs" />
+    <Compile Include="ExerciseExecutor\CandidateTaskResult.cs" />
+    <Compile Include="ExerciseExecutor\CandidateTestResult.cs" />
+    <Compile Include="ExerciseExecutor\TaskRunResult.cs" />
+    <Compile Include="ExerciseExecutor\TestAssemblyElements.cs" />
+    <Compile Include="ExerciseExecutor\TestAssemblyInfo.cs" />
+    <Compile Include="ExerciseExecutor\TestClassElements.cs" />
+    <Compile Include="ExerciseExecutor\TestClassInfo.cs" />
+    <Compile Include="ExerciseExecutor\TestMethodInfo.cs" />
+    <Compile Include="ExerciseManagement\CandidateExercise.cs" />
+    <Compile Include="ExerciseManagement\CandidateTask.cs" />
+    <Compile Include="ExerciseManagement\CandidateTaskInfo.cs" />
+    <Compile Include="ExerciseManagement\CandidateTaskViewInfo.cs" />
+    <Compile Include="ExerciseManagement\CandidateTest.cs" />
+    <Compile Include="ExerciseManagement\ExerciseForList.cs" />
+    <Compile Include="ExerciseManagement\TestAnswer.cs" />
+    <Compile Include="ExerciseManagement\TestQuestion.cs" />
+    <Compile Include="LectureManagement\Lecture.cs" />
+    <Compile Include="LectureManagement\LectureNotFoundException.cs" />
+    <Compile Include="LectureManagement\Section.cs" />
+    <Compile Include="LectureManagement\Subsection.cs" />
+    <Compile Include="PaginationParameters.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\ConfirmEmailRequest.cs" />
+    <Compile Include="Security\ForgotPasswordRequest.cs" />
+    <Compile Include="Security\RegisterAccountRequest.cs" />
+    <Compile Include="Security\ResetPasswordRequest.cs" />
+    <Compile Include="UserManagement\InviteInfo.cs" />
+    <Compile Include="Validators\CandidateTaskInfoValidator.cs" />
+    <Compile Include="Validators\PaginationParametersValidator.cs" />
+    <Compile Include="Validators\RegisterAccountRequestValidator.cs" />
+    <Compile Include="Validators\ResetPasswordRequestValidator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config">

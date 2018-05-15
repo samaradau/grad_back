@@ -90,5 +90,11 @@
       <DependentUpon>201804061852543_AddModuleVersionId.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DemoLab.Models\DemoLab.Models.csproj">
+      <Project>{4E11FB37-9CEE-4CDD-A68E-B71E7F970FE1}</Project>
+      <Name>DemoLab.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

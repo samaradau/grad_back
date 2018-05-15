@@ -243,7 +243,25 @@
     <Content Include="Views\**\*.*" />
     <Compile Include="Identity\*.cs" />
     <Compile Include="Providers\*.cs" />
-    <Compile Include="Services\**\*.cs" />
+    <Compile Include="Services\Identity\ApplicationRoleManager.cs" />
+    <Compile Include="Services\Identity\ApplicationSignInManager.cs" />
+    <Compile Include="Services\Identity\ApplicationUserManager.cs" />
+    <Compile Include="Services\Identity\EmailService.cs" />
+    <Compile Include="Services\Identity\IApplicationRoleManager.cs" />
+    <Compile Include="Services\Identity\IApplicationUserManager.cs" />
+    <Compile Include="Services\Identity\SmsService.cs" />
+    <Compile Include="Services\Security\IUserContext.cs" />
+    <Compile Include="Services\Security\IUserContextService.cs" />
+    <Compile Include="Services\Security\IUserRole.cs" />
+    <Compile Include="Services\Security\IUserRoleService.cs" />
+    <Compile Include="Services\Security\RoleNotFoundException.cs" />
+    <Compile Include="Services\Security\UserAccountInfo.cs" />
+    <Compile Include="Services\Security\UserContext.cs" />
+    <Compile Include="Services\Security\UserContextService.cs" />
+    <Compile Include="Services\Security\UserNotFoundException.cs" />
+    <Compile Include="Services\Security\UserProfileInfo.cs" />
+    <Compile Include="Services\Security\UserProfileNotFoundException.cs" />
+    <Compile Include="Services\Security\UserRole.cs" />
     <Compile Include="Identity\Migrations\Configuration.cs" />
   </ItemGroup>
   <ItemGroup>

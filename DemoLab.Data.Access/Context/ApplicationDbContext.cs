@@ -4,6 +4,7 @@ using DemoLab.Data.Access.ExerciseExecutor;
 using DemoLab.Data.Access.ExerciseManagement;
 using DemoLab.Data.Access.Migrations;
 using DemoLab.Data.Access.UserManagement;
+using DemoLab.Models.LectureManagement;
 
 namespace DemoLab.Data.Access.Context
 {
@@ -32,6 +33,12 @@ namespace DemoLab.Data.Access.Context
         public DbSet<Invite> Invites { get; set; }
 
         public DbSet<CandidateTaskTip> CandidateTaskTips { get; set; }
+
+        public DbSet<Lecture> Lectures { get; set; }
+
+        public DbSet<Section> Sections { get; set; }
+
+        public DbSet<Subsection> Subsections { get; set; }
 
         public static ApplicationDbContext Create()
         {
