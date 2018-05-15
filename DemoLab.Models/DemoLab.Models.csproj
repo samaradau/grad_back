@@ -79,6 +79,7 @@
     <Compile Include="LectureManagement\LectureNotFoundException.cs" />
     <Compile Include="LectureManagement\Section.cs" />
     <Compile Include="LectureManagement\Subsection.cs" />
+    <Compile Include="LectureManagement\SubsectionNotFoundException.cs" />
     <Compile Include="PaginationParameters.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Security\ConfirmEmailRequest.cs" />

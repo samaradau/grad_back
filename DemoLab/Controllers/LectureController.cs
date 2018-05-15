@@ -1,4 +1,6 @@
-﻿using System.Web.Http;
+﻿using System;
+using System.Web.Http;
+using DemoLab.Models.LectureManagement;
 using DemoLab.Services.LectureManagement;
 
 namespace DemoLab.Controllers
@@ -15,14 +17,53 @@ namespace DemoLab.Controllers
             _subsectionManager = new SubsectionManager();
         }
 
+        [AllowAnonymous]
+        [HttpGet]
+        [Route("{id}:guid")]
+        public IHttpActionResult GetLecture(Guid id)
+        {
+            try
+            {
+                var lecture = _lectureManager.GetLectureById(id);
+                return Ok(lecture);
+            }
+            catch (ArgumentNullException)
+            {
+                return BadRequest();
+            }
+            catch (LectureNotFoundException)
+            {
+                return NotFound();
+            }
+            catch (Exception)
+            {
+                return InternalServerError();
+            }
+        }
+
+        [AllowAnonymous]
+        [HttpGet]
+        [Route("")]
         public IHttpActionResult GetLectures()
         {
-            return Ok();
+            try
+            {
+                var lectures = _lectureManager.GetAll();
+                return Ok(lectures);
+            }
+            catch (LectureNotFoundException)
+            {
+                return NotFound();
+            }
+            catch (Exception)
+            {
+                return InternalServerError();
+            }
         }
 
         [HttpPost]
         [Route("create")]
-        public IHttpActionResult CreateLecture([FromBody]string lectureName, [FromBody]byte[] text, [FromBody]int subsectionName)
+        public IHttpActionResult CreateLecture([FromBody]string lectureName, [FromBody]byte[] text, [FromBody]string subsectionName)
         {
             try
             {
@@ -42,7 +83,7 @@ namespace DemoLab.Controllers
 
                 var lectureId = _lectureManager.CreateLecture(lectureName, text, subsectionId);
 
-                return Ok();
+                return Ok(lectureId);
             }
             catch
             {
