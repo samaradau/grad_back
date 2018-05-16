@@ -73,6 +73,10 @@
     <Compile Include="Migrations\201804061852543_AddModuleVersionId.Designer.cs">
       <DependentUpon>201804061852543_AddModuleVersionId.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805160554529_AddingLectures.cs" />
+    <Compile Include="Migrations\201805160554529_AddingLectures.Designer.cs">
+      <DependentUpon>201805160554529_AddingLectures.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -88,6 +92,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201804061852543_AddModuleVersionId.resx">
       <DependentUpon>201804061852543_AddModuleVersionId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805160554529_AddingLectures.resx">
+      <DependentUpon>201805160554529_AddingLectures.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

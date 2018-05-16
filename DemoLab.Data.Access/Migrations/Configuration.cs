@@ -7,8 +7,8 @@ namespace DemoLab.Data.Access.Migrations
         public Configuration()
         {
             ContextKey = "ApplicationData";
-            AutomaticMigrationsEnabled = false;
-            AutomaticMigrationDataLossAllowed = false;
+            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationDataLossAllowed = true;
         }
 
         protected override void Seed(Context.ApplicationDbContext context)

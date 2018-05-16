@@ -6,12 +6,12 @@ using DemoLab.Services.LectureManagement;
 namespace DemoLab.Controllers
 {
     [RoutePrefix("api/v1/lectures")]
-    public class LectureController : ApiController
+    public class LecturesController : ApiController
     {
         private readonly LectureManager _lectureManager;
         private readonly SubsectionManager _subsectionManager;
 
-        public LectureController()
+        public LecturesController()
         {
             _lectureManager = new LectureManager();
             _subsectionManager = new SubsectionManager();
@@ -55,9 +55,9 @@ namespace DemoLab.Controllers
             {
                 return NotFound();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return InternalServerError();
+                return InternalServerError(ex);
             }
         }
 

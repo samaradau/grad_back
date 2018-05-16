@@ -14,6 +14,12 @@ namespace DemoLab.Models.LectureManagement
 
         public byte[] Text { get; set; }
 
+		public Guid SectionId { get; set; }
+
         public Guid SubsectionId { get; set; }
+
+		public Guid CreatorId { get; set; }
+
+		public DateTime LastModified { get; set; }
     }
 }
